@@ -1,7 +1,16 @@
+import telebot
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8444557721:AAH3DBPwaSM-1-6cjJ1PkPbNK0Ikopa7fBs")
+
+print("TOKEN:", BOT_TOKEN)
+
 bot = telebot.TeleBot(BOT_TOKEN)
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, "Бот работает 🚀")
+
 
 # Пам'ять для вибору мови
 user_lang = {}
